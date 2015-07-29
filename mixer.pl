@@ -1,11 +1,11 @@
 $a = 10;
-@words = qw/These is the syntax for here document and it will continue
+@words = qw/This is the syntax for here document and it will continue
 until it encounters a EOF in the first line
 This is case of double quote so variable value will be 
 interpolated/;
-@words = qw/Extremely lenghty verbage becomes difficult to intepret and comprehend/;
-@vowels = qw/a e i o u y/
-@consonants = qw/b c s d g h j k l m n p q r s t v w x z/
+# @words = qw/Extremely lenghty verbage becomes difficult to intepret and comprehend/;
+@vowels = qw/a e i o u y/;
+@consonants = qw/b c s d g h j k l m n p q r s t v w x z/;
 
 =for comment
 
@@ -17,9 +17,13 @@ if( $element ~~ @list )
 =cut
 
 for ($i = 0; $i < @words; $i++) {
-	print $words[$i] . " >> ";
+	# print $words[$i] . " >> ";
 	$words[$i] = &_mix_word($words[$i]);
-	print $words[$i] . "\n";
+	# print $words[$i] . "\n";
+}
+
+for ($i = 0; $i < @words; $i++) {
+	print $words[$i] . "* *";
 }
 
 sub _mix_word {
